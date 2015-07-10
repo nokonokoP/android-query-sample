@@ -21,7 +21,7 @@ import java.util.concurrent.atomic.AtomicInteger;
  */
 public class DatabaseHelper extends OrmLiteSqliteOpenHelper {
 
-    private static final String DB_NAME = "sample.db";
+    private static final String DB_NAME = "sample_db";
     private static final int DB_VERSION = 1;
 
     private static DatabaseHelper sHelper = null;
