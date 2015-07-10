@@ -1,0 +1,117 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    android:layout_height="match_parent" android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:paddingBottom="@dimen/activity_vertical_margin" tools:context=".MainActivity">
+
+    <View
+        android:id="@+id/employee_center"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_centerVertical="true" />
+
+    <!-- 社員登録 -->
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="5dp"
+        android:layout_alignBottom="@id/employee_center"
+        android:layout_alignParentTop="true"
+        android:background="@color/employee_register">
+
+        <!-- 社員登録タイトル -->
+        <TextView
+            android:id="@+id/employee_register_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:text="@string/employee_register"/>
+
+        <!-- 社員コード -->
+        <LinearLayout
+            android:id="@+id/employee_code_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/employee_register_title"
+            android:orientation="vertical" >
+
+            <EditText
+                android:id="@+id/employee_code"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:hint="@string/employee_code"/>
+
+            <EditText
+                android:id="@+id/employee_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:hint="@string/employee_name" />
+
+            <!-- 登録ボタン -->
+            <Button
+                android:id="@+id/employee_register_button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="end"
+                android:text="@string/register_button" />
+
+        </LinearLayout>
+
+
+    </RelativeLayout>
+
+    <!-- 社員検索 -->
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="5dp"
+        android:layout_alignTop="@id/employee_center"
+        android:layout_alignParentBottom="true"
+        android:background="@color/employee_search">
+
+        <!-- 社員検索タイトル -->
+        <TextView
+            android:id="@+id/employee_search_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:text="@string/employee_search"/>
+
+        <!-- 社員コード検索 -->
+        <LinearLayout
+            android:id="@+id/employee_code_search_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/employee_search_title"
+            android:orientation="vertical">
+
+            <EditText
+                android:id="@+id/employee_code_search"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:hint="@string/employee_code"/>
+
+            <!-- 検索ボタン -->
+            <Button
+                android:id="@+id/employee_search_button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:layout_gravity="end"
+                android:text="@string/search_button"/>
+
+            <TextView
+                android:id="@+id/employee_search_result"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/search_result" />
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+</RelativeLayout>
